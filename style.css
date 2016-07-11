@@ -1,0 +1,163 @@
+body {
+  background-image: URL('stardust.png');
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  overflow-y: hidden;
+}
+
+
+h1 {
+  color: #4DD0E1;
+  font-size: 9em;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+  border-bottom: 1px #45bbca solid;
+}
+
+h2 {
+	text-align: center;
+	color: #2e7c87;
+	font-size: 3em;
+	margin: 0;
+	padding-top: .5em;
+	font-weight: 300;
+}
+
+.home {
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.nav {
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	font-size: 4em;
+	font-weight: 700;
+	color: #4F4E55;
+}
+
+#about {
+	width: 32vw;
+	left: 0;
+}
+
+#resume {
+	width: 26vw;
+	left: 24.5vw;
+}
+
+#design {
+	width: 30vw;
+	left: 44vw;
+}
+
+#dev {
+	width: 34vw;
+	left: 66vw;
+}
+
+.aboutTriSVG {
+	width: 30vw;
+	height: auto;
+	position: absolute;
+	bottom: 0;
+}
+
+#aboutTri:hover {
+	fill: #ffa2a9;
+}
+
+#resumeTriSVG {
+	width: 26vw;
+	height: auto;
+	position: absolute;
+	bottom: 0;
+	left: 24.5vw;
+}
+
+#resumeTri:hover {
+	fill: #fff;
+}
+
+#designTriSVG {
+	width: 30vw;
+	height: auto;
+	position: absolute;
+	bottom: 0;
+	left: 44vw;
+	z-index: -1;
+}
+
+#designTri:hover {
+	fill: #fff;
+}
+
+#developmentTriSVG {
+	width: 34vw;
+	height: auto;
+	position: absolute;
+	bottom: 0;
+	left: 66vw;
+}
+
+#developmentTri:hover {
+	fill: #fff;
+}
+
+#box {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+  background-image: URL('stardust.png');
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+#container {
+    width: 200px;
+    height: 300px;
+    position:absolute;
+    bottom: 0;
+    left:0;
+}
+
+.bar-nav {
+	position: static;
+	width: 100%;
+	font-size: 3em;
+	font-weight: 700;
+	color: #4F4E55;
+}
+
+.bar-nav a {
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+}
+
+.about {
+	background-color: #ff8b94;
+}
+
+.resume {
+	background-color: #a8e6cf;
+}
+
+.design {
+	background-color: #ffd3b6;
+}
+
+.dev{
+	background-color: #CBDBB1;
+}
+
+.shadow {
+	display: none;
+}
