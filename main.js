@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$('#aboutTri').click(function() {
+	$('#aboutTriG').click(function() {
 		$('#box').animate({
 	            height: 'toggle'
 	            }, 500, function() {
@@ -13,10 +13,12 @@ $(document).ready(function(){
 	            height: 'toggle'
 	            }, 500, function() {
 	        });
+		$('#box').show();
+		$('#aboutSection').css('display', 'resume');
 		 event.preventDefault();
 	});
 
-	$('#aboutTri').hover(function(){
+	$('#aboutTriG').hover(function(){
 		$('#aboutTriShadow').show();
 	}, function(){
 		$('#aboutTriShadow').hide();
@@ -26,6 +28,14 @@ $(document).ready(function(){
 		$('#aboutTriShadow').show();
 	}, function(){
 		$('#aboutTriShadow').hide();
+	});
+
+	$('#homeTri').click(function() {
+		$('#box').animate({
+	            height: 'toggle'
+	            }, 500, function() {
+	        });
+		 event.preventDefault();
 	});
 
 });

@@ -40,6 +40,7 @@ h2 {
 	font-size: 4em;
 	font-weight: 700;
 	color: #4F4E55;
+	text-decoration: none;
 }
 
 #about {
@@ -63,7 +64,7 @@ h2 {
 }
 
 .aboutTriSVG {
-	width: 30vw;
+	width: 30%;
 	height: auto;
 	position: absolute;
 	bottom: 0;
@@ -74,11 +75,11 @@ h2 {
 }
 
 #resumeTriSVG {
-	width: 26vw;
+	width: 26%;
 	height: auto;
 	position: absolute;
 	bottom: 0;
-	left: 24.5vw;
+	left: 24.5%;
 }
 
 #resumeTri:hover {
@@ -86,11 +87,11 @@ h2 {
 }
 
 #designTriSVG {
-	width: 30vw;
+	width: 30%;
 	height: auto;
 	position: absolute;
 	bottom: 0;
-	left: 44vw;
+	left: 44%;
 	z-index: -1;
 }
 
@@ -99,11 +100,11 @@ h2 {
 }
 
 #developmentTriSVG {
-	width: 34vw;
+	width: 34%;
 	height: auto;
 	position: absolute;
 	bottom: 0;
-	left: 66vw;
+	left: 66%;
 }
 
 #developmentTri:hover {
@@ -138,8 +139,13 @@ h2 {
 
 .bar-nav a {
 	display: inline-block;
-	width: 25%;
+	width: 24%;
 	text-align: center;
+	vertical-align: top;
+}
+
+.bar-nav .about{
+	width: 22%;
 }
 
 .about {
@@ -159,5 +165,23 @@ h2 {
 }
 
 .shadow {
+	display: none;
+}
+
+#homeSVG {
+	width: 6%;
+	height: auto;
+}
+
+#aboutSection {
+	background-color: pink;
+	display: none;
+}
+
+#resumeSection{
+	background-color: blue;
+}
+
+.hidden {
 	display: none;
 }
