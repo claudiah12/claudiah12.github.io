@@ -29,47 +29,115 @@
        <h2>Developer and Designer</h2>
       </div>
     </div>
+
+<!--Shadows-->
 <svg height="64" width="64" viewBox="0 0 64 64" id="aboutTriShadow" class="aboutTriSVG shadow">
 <defs>
-    <filter id="f1">
+    <filter id="blur">
       <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
     </filter>
   </defs>
-  <polygon fill="#000" points="32,2 2,64 62,64" id="aboutTriShadow" filter="url(#f1)"/>
+  <polygon fill="#000" points="32,2 2,64 62,64" id="aboutTriShadow" filter="url(#blur)"/>
 </svg>
+
+<svg height="64" width="64" viewBox="0 0 64 64" id="resumeTriShadow" class="resumeTriSVG shadow">
+<defs>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+  </defs>
+  <polygon fill="#000" points="32,2 1,64 63,64" filter="url(#blur)"/>
+</svg>
+
+<svg height="54" width="64" viewBox="0 0 64 64" id="designTriShadow" class="designTriSVG shadow">
+<defs>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+  </defs>
+  <polygon fill="#000" points="32,2 2,54 62,54" id="designTriShadow" filter="url(#blur)"/>
+</svg>
+
+<svg height="64" width="64" viewBox="0 0 64 64" id="developmentTriShadow" class="developmentTriSVG shadow">
+<defs>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+  </defs>
+  <polygon fill="#000" points="32,2 2,64 62,64" id="developmentTriShadow" filter="url(#blur)"/>
+</svg>
+
+<!--Main UI-->
 
 <svg height="60" width="60" viewBox="0 0 60 60" class="aboutTriSVG">
-<g id="aboutTriG">
-  <polygon fill="#ff8b94" points="30,3 3,60 57,60" id="aboutTri"/><polygon></g>
+  <polygon fill="#ff8b94" points="30,3 3,60 57,60" id="aboutTri" class="aboutLink"/><polygon>
 </svg>
-      <a href="#" class="nav" id="about">About</a>
+      <div class="nav aboutLink" id="about">About</div>
 
-<svg height="60" width="60" viewBox="0 0 60 60" id="resumeTriSVG">
-  <polygon fill="#a8e6cf" points="30,0 0,60 60,60" id="resumeTri"/><polygon>
+<svg height="60" width="60" viewBox="0 0 60 60" class="resumeTriSVG">
+  <polygon fill="#a8e6cf" points="30,4 4,60 56,60" id="resumeTri" class="resumeLink"/><polygon>
 </svg>
-    <div class="nav" id="resume">Resume</div>
+    <div class="nav resumeLink" id="resume">Resume</div>
 
-<svg height="50" width="60" viewBox="0 0 60 50" id="designTriSVG">
-  <polygon fill="#ffd3b6" points="30,0 0,50 60,50" id="resumeTri"/><polygon>
-</svg>
-    <div class="nav" id="design">Design</div>
 
-<svg height="60" width="60" viewBox="0 0 60 60" id="developmentTriSVG">
-  <polygon fill="#CBDBB1" points="30,0 0,60 60,60" id="resumeTri"/><polygon>
+<svg height="50" width="60" viewBox="0 0 60 50" class="designTriSVG">
+  <polygon fill="#ffd3b6" points="30,3 3,50 57,50" id="designTri" class="designLink"/><polygon>
 </svg>
-    <div class="nav" id="dev">Development</div>
+    <div class="nav designLink" id="design">Design</div>
+
+
+<svg height="60" width="60" viewBox="0 0 60 60" class="developmentTriSVG">
+  <polygon fill="#CBDBB1" points="30,3 3,60 57,60" id="developmentTri" class="developmentLink"/><polygon>
+</svg>
+    <div class="nav developmentLink" id="dev">Development</div>
+
     
 <div id="container">
 <div id='box'>
-  <div class="bar-nav">
 
-  <svg height="90" width="60" viewBox="0 0 60 90" id="homeSVG">
-  <g><polygon fill="#69686d" points="0,0 60,0 60,60 30,90 0,60" id="homeTri"/><polygon></g>
-  <path stroke-width="3" d="M 19 14 l 11 -6 l 11 6" stroke-linecap="round" id="lineAB" stroke="white" fill="none"></path>
-  <g><text text-anchor="middle" x="30" y="30" fill="#ffffff" font-size="12">
-      <tspan x="50%" text-anchor="middle">Back</tspan><tspan dy="1.2em" x="50%" text-anchor="middle">to</tspan><tspan dy="1.2em" x="50%" text-anchor="middle">Top</tspan>
-      </text></g>
-  </svg><a class="about">About</a><a class="resume">Resume</a><a class="design">Design</a><a class="dev">Development</a>
+  <div class="bar-nav">
+    <svg height="90" width="60" viewBox="0 0 60 90" id="homeSVG">
+    <g><polygon fill="#69686d" points="0,0 60,0 60,60 30,90 0,60" id="homeTri"/><polygon></g>
+    <path stroke-width="3" d="M 19 14 l 11 -6 l 11 6" stroke-linecap="round" id="lineAB" stroke="white" fill="none"></path>
+    <g><text text-anchor="middle" x="30" y="30" fill="#ffffff" font-size="12">
+        <tspan x="50%" text-anchor="middle">Back</tspan><tspan dy="1.2em" x="50%" text-anchor="middle">to</tspan><tspan dy="1.2em" x="50%" text-anchor="middle">Top</tspan>
+        </text></g>
+    </svg><a class="about">About</a><a class="resume">Resume</a><a class="design">Design</a><a class="dev">Development</a>
+  </div>
+
+  <div id="aboutSection" class="section-container">
+    <h3 class="about">About</h3>
+    <div class="section-body">
+    Details
+    </div>
+  </div>
+
+  <div id="resumeSection" class="section-container">
+    <h3 class="resume">Resume</h3>
+    <div class="section-body">
+      <h4>Education</h4>
+      The Ohio State University
+      <ul>
+      <li>Pursuing B.S. in Computer Science</li>
+      <li>Minoring in Visual Communication Design</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="designSection" class="section-container">
+    <h3 class="design">Resume</h3>
+    <div class="section-body">
+      <h4>Design</h4>
+      
+    </div>
+  </div>
+
+  <div id="developmentSection" class="section-container">
+    <h3 class="development">Resume</h3>
+    <div class="section-body">
+      <h4>Development</h4>
+      
+    </div>
   </div>
 </div>
 </div>

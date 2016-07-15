@@ -1,33 +1,39 @@
 $(document).ready(function(){
 
-	$('#aboutTriG').click(function() {
+	$('.aboutLink').click(function() {
 		$('#box').animate({
 	            height: 'toggle'
 	            }, 500, function() {
+				$('#aboutSection').show();
 	        });
-		 event.preventDefault();
 	});
 
-	$('.about').click(function() {
+	$('.resumeLink').click(function() {
 		$('#box').animate({
 	            height: 'toggle'
 	            }, 500, function() {
+				$('#resumeSection').show();
 	        });
-		$('#box').show();
-		$('#aboutSection').css('display', 'resume');
-		 event.preventDefault();
 	});
 
-	$('#aboutTriG').hover(function(){
-		$('#aboutTriShadow').show();
-	}, function(){
-		$('#aboutTriShadow').hide();
+	$('.designLink').click(function() {
+		$('#box').animate({
+	            height: 'toggle'
+	            }, 500, function() {
+				$('#designSection').show();
+	        });
 	});
 
-	$('.about').hover(function(){
-		$('#aboutTriShadow').show();
-	}, function(){
-		$('#aboutTriShadow').hide();
+	$('.developmentLink').click(function() {
+		$('#box').animate({
+	            height: 'toggle'
+	            }, 500, function() {
+				$('#developmentSection').show();
+	        });
+	});
+
+	$('.bar-nav').click(function() {
+		$('.section-container').hide();
 	});
 
 	$('#homeTri').click(function() {
@@ -36,6 +42,30 @@ $(document).ready(function(){
 	            }, 500, function() {
 	        });
 		 event.preventDefault();
+	});
+
+	$('.aboutLink').hover(function(){
+		$('#aboutTriShadow').show();
+	}, function(){
+		$('#aboutTriShadow').hide();
+	});
+
+	$('.resumeLink').hover(function(){
+		$('#resumeTriShadow.shadow').show();
+	}, function(){
+		$('#resumeTriShadow').hide();
+	});
+
+	$('.designLink').hover(function(){
+		$('#designTriShadow').show();
+	}, function(){
+		$('#designTriShadow').hide();
+	});
+
+	$('.developmentLink').hover(function(){
+		$('#developmentTriShadow').show();
+	}, function(){
+		$('#developmentTriShadow').hide();
 	});
 
 });
