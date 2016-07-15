@@ -31,7 +31,7 @@
     </div>
 
 <!--Shadows-->
-<svg height="64" width="64" viewBox="0 0 64 64" id="aboutTriShadow" class="aboutTriSVG shadow">
+<svg height="64" width="64" viewBox="0 0 64 64" id="aboutTriShadow" class="aboutTriSVG shadow" preserveAspectRatio="xMidYMax meet">
 <defs>
     <filter id="blur">
       <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
@@ -40,16 +40,16 @@
   <polygon fill="#000" points="32,2 2,64 62,64" id="aboutTriShadow" filter="url(#blur)"/>
 </svg>
 
-<svg height="64" width="64" viewBox="0 0 64 64" id="resumeTriShadow" class="resumeTriSVG shadow">
+<svg height="64" width="64" viewBox="0 0 64 64" id="resumeTriShadow" class="resumeTriSVG shadow" preserveAspectRatio="xMidYMax meet">
 <defs>
     <filter id="blur">
       <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
     </filter>
   </defs>
-  <polygon fill="#000" points="32,2 1,64 63,64" filter="url(#blur)"/>
+  <polygon fill="#000" points="32,2 2,64 62,64" filter="url(#blur)"/>
 </svg>
 
-<svg height="54" width="64" viewBox="0 0 64 64" id="designTriShadow" class="designTriSVG shadow">
+<svg height="54" width="64" viewBox="0 0 64 54" id="designTriShadow" class="designTriSVG shadow" preserveAspectRatio="xMinYMax meet">
 <defs>
     <filter id="blur">
       <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
@@ -58,7 +58,7 @@
   <polygon fill="#000" points="32,2 2,54 62,54" id="designTriShadow" filter="url(#blur)"/>
 </svg>
 
-<svg height="64" width="64" viewBox="0 0 64 64" id="developmentTriShadow" class="developmentTriSVG shadow">
+<svg height="64" width="64" viewBox="0 0 64 64" id="developmentTriShadow" class="developmentTriSVG shadow" preserveAspectRatio="xMidYMax meet">
 <defs>
     <filter id="blur">
       <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
@@ -69,24 +69,24 @@
 
 <!--Main UI-->
 
-<svg height="60" width="60" viewBox="0 0 60 60" class="aboutTriSVG">
+<svg height="60" width="60" viewBox="0 0 60 60" class="aboutTriSVG" preserveAspectRatio="xMidYMax meet">
   <polygon fill="#ff8b94" points="30,3 3,60 57,60" id="aboutTri" class="aboutLink"/><polygon>
 </svg>
       <div class="nav aboutLink" id="about">About</div>
 
-<svg height="60" width="60" viewBox="0 0 60 60" class="resumeTriSVG">
+<svg height="60" width="60" viewBox="0 0 60 60" class="resumeTriSVG" preserveAspectRatio="xMidYMax meet">
   <polygon fill="#a8e6cf" points="30,4 4,60 56,60" id="resumeTri" class="resumeLink"/><polygon>
 </svg>
     <div class="nav resumeLink" id="resume">Resume</div>
 
 
-<svg height="50" width="60" viewBox="0 0 60 50" class="designTriSVG">
+<svg height="50" width="60" viewBox="0 0 60 50" class="designTriSVG" preserveAspectRatio="xMidYMax meet">
   <polygon fill="#ffd3b6" points="30,3 3,50 57,50" id="designTri" class="designLink"/><polygon>
 </svg>
     <div class="nav designLink" id="design">Design</div>
 
 
-<svg height="60" width="60" viewBox="0 0 60 60" class="developmentTriSVG">
+<svg height="60" width="60" viewBox="0 0 60 60" class="developmentTriSVG" preserveAspectRatio="xMidYMax meet">
   <polygon fill="#CBDBB1" points="30,3 3,60 57,60" id="developmentTri" class="developmentLink"/><polygon>
 </svg>
     <div class="nav developmentLink" id="dev">Development</div>
@@ -96,10 +96,10 @@
 <div id='box'>
 
   <div class="bar-nav">
-    <svg height="90" width="60" viewBox="0 0 60 90" id="homeSVG">
+    <svg height="90" width="60" viewBox="0 0 60 90" id="homeSVG" preserveAspectRatio="xMidYMin meet">
     <g><polygon fill="#69686d" points="0,0 60,0 60,60 30,90 0,60" id="homeTri"/><polygon></g>
     <path stroke-width="3" d="M 19 14 l 11 -6 l 11 6" stroke-linecap="round" id="lineAB" stroke="white" fill="none"></path>
-    <g><text text-anchor="middle" x="30" y="30" fill="#ffffff" font-size="12">
+    <g><text text-anchor="middle" x="30" y="30" fill="#ffffff" font-size="13">
         <tspan x="50%" text-anchor="middle">Back</tspan><tspan dy="1.2em" x="50%" text-anchor="middle">to</tspan><tspan dy="1.2em" x="50%" text-anchor="middle">Top</tspan>
         </text></g>
     </svg><a class="about">About</a><a class="resume">Resume</a><a class="design">Design</a><a class="dev">Development</a>
