@@ -1,35 +1,19 @@
 $(document).ready(function(){
 
 	$('.aboutLink').click(function() {
-		$('#box').animate({
-	            height: 'toggle'
-	            }, 500, function() {
-				$('#aboutSection').show();
-	        });
+		openSection($('#aboutSection'));
 	});
 
 	$('.resumeLink').click(function() {
-		$('#box').animate({
-	            height: 'toggle'
-	            }, 500, function() {
-				$('#resumeSection').show();
-	        });
+		openSection($('#resumeSection'));
 	});
 
 	$('.designLink').click(function() {
-		$('#box').animate({
-	            height: 'toggle'
-	            }, 500, function() {
-				$('#designSection').show();
-	        });
+		openSection($('#designSection'));
 	});
 
 	$('.developmentLink').click(function() {
-		$('#box').animate({
-	            height: 'toggle'
-	            }, 500, function() {
-				$('#developmentSection').show();
-	        });
+		openSection($('#developmentSection'));
 	});
 
 	$('.bar-nav').click(function() {
@@ -37,6 +21,8 @@ $(document).ready(function(){
 	});
 
 	$('#homeTri').click(function() {
+		$('#container').css('z-index', '-2');
+		$('#box').css('z-index', '-2');
 		$('#box').animate({
 	            height: 'toggle'
 	            }, 500, function() {
@@ -45,28 +31,46 @@ $(document).ready(function(){
 	});
 
 	$('.aboutLink').hover(function(){
+		$('#aboutTri').css('fill', '#ffa2a9');
 		$('#aboutTriShadow').show();
 	}, function(){
+		$('#aboutTri').css('fill', '#ff8b94');
 		$('#aboutTriShadow').hide();
 	});
 
 	$('.resumeLink').hover(function(){
+		$('#resumeTri').css('fill', '#ffa2a9');
 		$('#resumeTriShadow.shadow').show();
 	}, function(){
+		$('#resumeTri').css('fill', '#a8e6cf');
 		$('#resumeTriShadow').hide();
 	});
 
 	$('.designLink').hover(function(){
+		$('#designTri').css('fill', '#ffa2a9');
 		$('#designTriShadow').show();
 	}, function(){
+		$('#designTri').css('fill', '#ffd3b6');
 		$('#designTriShadow').hide();
 	});
 
 	$('.developmentLink').hover(function(){
+		$('#developmentTri').css('fill', '#ffa2a9');
 		$('#developmentTriShadow').show();
 	}, function(){
+		$('#developmentTri').css('fill', '#CBDBB1');
 		$('#developmentTriShadow').hide();
 	});
 
 });
+
+function openSection(section){
+	$('#container').css('z-index', '2');
+	$('#box').css('z-index', '2');
+	$('#box').animate({
+	    height: 'toggle'
+	    }, 500, function() {
+				section.show();
+	        });
+}
 
