@@ -80,6 +80,10 @@ h2 {
 	left: 22%;
 }
 
+#resumeTri:hover {
+	fill: #fff;
+}
+
 .designTriSVG {
 	width: 30%;
 	height: 50%;
@@ -95,6 +99,10 @@ h2 {
 	position: absolute;
 	bottom: 0;
 	left: 65%;
+}
+
+#developmentTri:hover {
+	fill: #fff;
 }
 
 #box {
@@ -145,11 +153,11 @@ h2 {
 }
 
 .design {
-	background-color: #ffd3b6;
+	background-color: #ffcba9;
 }
 
 .dev{
-	background-color: #CBDBB1;
+	background-color: #d5ecb0;
 }
 
 .shadow {	

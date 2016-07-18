@@ -39,7 +39,7 @@ $(document).ready(function(){
 	});
 
 	$('.resumeLink').hover(function(){
-		$('#resumeTri').css('fill', '#ffa2a9');
+		$('#resumeTri').css('fill', '#c2eddd');
 		$('#resumeTriShadow.shadow').show();
 	}, function(){
 		$('#resumeTri').css('fill', '#a8e6cf');
@@ -47,18 +47,18 @@ $(document).ready(function(){
 	});
 
 	$('.designLink').hover(function(){
-		$('#designTri').css('fill', '#ffa2a9');
+		$('#designTri').css('fill', '#ffdac2');
 		$('#designTriShadow').show();
 	}, function(){
-		$('#designTri').css('fill', '#ffd3b6');
+		$('#designTri').css('fill', '#ffcba9');
 		$('#designTriShadow').hide();
 	});
 
 	$('.developmentLink').hover(function(){
-		$('#developmentTri').css('fill', '#ffa2a9');
+		$('#developmentTri').css('fill', '#e6f2d3');
 		$('#developmentTriShadow').show();
 	}, function(){
-		$('#developmentTri').css('fill', '#CBDBB1');
+		$('#developmentTri').css('fill', '#d5ecb0');
 		$('#developmentTriShadow').hide();
 	});
 
