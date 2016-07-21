@@ -1,18 +1,18 @@
 $(document).ready(function(){
 
-	$('.aboutLink').click(function() {
+	$('.aboutLink').on('click touchend', function() {
 		openSection($('#aboutSection'));
 	});
 
-	$('.resumeLink').click(function() {
+	$('.resumeLink').on('click touchend', function() {
 		openSection($('#resumeSection'));
 	});
 
-	$('.designLink').click(function() {
+	$('.designLink').on('click touchend', function() {
 		openSection($('#designSection'));
 	});
 
-	$('.developmentLink').click(function() {
+	$('.developmentLink').on('click touchend', function() {
 		openSection($('#developmentSection'));
 	});
 
@@ -32,7 +32,7 @@ $(document).ready(function(){
 
 	$('.aboutLink').hover(function(){
 		$('#aboutTri').css('fill', '#ffa2a9');
-		$('#aboutTriShadow').show();
+		$('#aboutTriShadow.shadow').show();
 	}, function(){
 		$('#aboutTri').css('fill', '#ff8b94');
 		$('#aboutTriShadow').hide();
@@ -72,5 +72,4 @@ function openSection(section){
 	    }, 500, function() {
 				section.show();
 	        });
-}
-
+};
