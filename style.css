@@ -25,6 +25,16 @@ h2 {
 	font-weight: 300;
 }
 
+@media (max-width: 550px) {
+	h1 {
+		font-size: 15vh;
+	}
+
+	h2 {
+		font-size: 5vh;
+	}
+}
+
 .home {
   height: 50vh;
   display: flex;
