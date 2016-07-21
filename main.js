@@ -16,9 +16,30 @@ $(document).ready(function(){
 		openSection($('#developmentSection'));
 	});
 
-	$('.bar-nav').click(function() {
+	$('#homeSVG').click(function() {
 		$('.section-container').hide();
 	});
+
+	$('.bar-nav > .about').click(function() {
+		$('.section-container').hide();
+		$('#aboutSection').show();
+	});
+
+	$('.bar-nav > .resume').click(function() {
+		$('.section-container').hide();
+		$('#resumeSection').show();
+	});
+
+	$('.bar-nav > .design').click(function() {
+		$('.section-container').hide();
+		$('#designSection').show();
+	});
+
+	$('.bar-nav > .dev').click(function() {
+		$('.section-container').hide();
+		$('#developmentSection').show();
+	});
+
 
 	$('#homeTri').click(function() {
 		$('#container').css('z-index', '-2');
