@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 	$('.aboutLink').on('click touchend', function() {
 		openSection($('#aboutSection'));
+		aboutIntro();
 	});
 
 	$('.resumeLink').on('click touchend', function() {
@@ -41,7 +42,7 @@ $(document).ready(function(){
 	});
 
 
-	$('#homeTri').click(function() {
+	$('#homeSVG').click(function() {
 		$('#container').css('z-index', '-2');
 		$('#box').css('z-index', '-2');
 		$('#box').animate({
@@ -94,3 +95,15 @@ function openSection(section){
 				section.show();
 	        });
 };
+
+function aboutIntro(){
+	$(".rotate").textrotator({
+	animation: "flipUp", 
+	separator: ",", 
+	speed: 2000,
+	repeat: false,
+	onFinish: function() {
+		$(".rotate").text("Claudia");
+	}
+	});
+}

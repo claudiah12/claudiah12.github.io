@@ -14,9 +14,11 @@
 
 
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="simpletextrotator.css" rel="stylesheet" type="text/css">
 
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css">
-    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="jquery.simple-text-rotator.js"></script>
 
 <script src="main.js"></script>
 
@@ -37,7 +39,7 @@
       <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
     </filter>
   </defs>
-  <polygon fill="#000" points="32,2 2,64 62,64" id="aboutTriShadow" filter="url(#blur)"/>
+  <polygon fill="#000" points="32,2 2,64 62,64" filter="url(#blur)"/>
 </svg>
 
 <svg height="64" width="64" viewBox="0 0 64 64" id="resumeTriShadow" class="resumeTriSVG shadow" preserveAspectRatio="xMidYMax meet">
@@ -46,7 +48,7 @@
       <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
     </filter>
   </defs>
-  <polygon fill="#000" points="32,2 2,64 62,64" filter="url(#blur)"/>
+  <polygon fill="#000" points="32,2 3,64 61,64" filter="url(#blur)"/>
 </svg>
 
 <svg height="54" width="64" viewBox="0 0 64 54" id="designTriShadow" class="designTriSVG shadow" preserveAspectRatio="xMinYMax meet">
@@ -55,7 +57,7 @@
       <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
     </filter>
   </defs>
-  <polygon fill="#000" points="32,2 2,54 62,54" id="designTriShadow" filter="url(#blur)"/>
+  <polygon fill="#000" points="32,2 2,54 62,54" filter="url(#blur)"/>
 </svg>
 
 <svg height="64" width="64" viewBox="0 0 64 64" id="developmentTriShadow" class="developmentTriSVG shadow" preserveAspectRatio="xMidYMax meet">
@@ -64,30 +66,30 @@
       <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
     </filter>
   </defs>
-  <polygon fill="#000" points="32,2 2,64 62,64" id="developmentTriShadow" filter="url(#blur)"/>
+  <polygon fill="#000" points="32,2 2,64 62,64" filter="url(#blur)"/>
 </svg>
 
 <!--Main UI-->
 
 <svg height="60" width="60" viewBox="0 0 60 60" class="aboutTriSVG" preserveAspectRatio="xMidYMax meet">
-  <polygon fill="#ff8b94" points="30,3 3,60 57,60" id="aboutTri" class="aboutLink"/><polygon>
+  <polygon fill="#ff8b94" points="30,3 3,60 57,60" id="aboutTri" class="aboutLink"/>
 </svg>
       <div class="nav aboutLink" id="about">About</div>
 
 <svg height="60" width="60" viewBox="0 0 60 60" class="resumeTriSVG" preserveAspectRatio="xMidYMax meet">
-  <polygon fill="#a8e6cf" points="30,4 4,60 56,60" id="resumeTri" class="resumeLink"/><polygon>
+  <polygon fill="#a8e6cf" points="30,4 4,60 56,60" id="resumeTri" class="resumeLink"/>
 </svg>
     <div class="nav resumeLink" id="resume">Resume</div>
 
 
 <svg height="50" width="60" viewBox="0 0 60 50" class="designTriSVG" preserveAspectRatio="xMidYMax meet">
-  <polygon fill="#ffcba9" points="30,3 3,50 57,50" id="designTri" class="designLink"/><polygon>
+  <polygon fill="#ffcba9" points="30,3 3,50 57,50" id="designTri" class="designLink"/>
 </svg>
     <div class="nav designLink" id="design">Design</div>
 
 
 <svg height="60" width="60" viewBox="0 0 60 60" class="developmentTriSVG" preserveAspectRatio="xMidYMax meet">
-  <polygon fill="#d5ecb0" points="30,3 3,60 57,60" id="developmentTri" class="developmentLink"/><polygon>
+  <polygon fill="#d5ecb0" points="30,3 3,60 57,60" id="developmentTri" class="developmentLink"/>
 </svg>
     <div class="nav developmentLink" id="dev">Development</div>
 
@@ -97,7 +99,7 @@
 
   <div class="bar-nav">
     <svg height="90" width="60" viewBox="0 0 60 90" id="homeSVG" preserveAspectRatio="xMidYMin meet">
-    <g><polygon fill="#69686d" points="0,0 60,0 60,60 30,90 0,60" id="homeTri"/><polygon></g>
+    <g><polygon fill="#69686d" points="0,0 60,0 60,60 30,90 0,60" id="homeTri"/></g>
     <path stroke-width="3" d="M 19 13 l 11 -7 l 11 7" stroke-linecap="round" id="lineAB" stroke="white" fill="none"></path>
     <g><text text-anchor="middle" x="30" y="30" fill="#ffffff" font-size="14">
         <tspan x="50%" text-anchor="middle">Back</tspan><tspan dy="1.2em" x="50%" text-anchor="middle">to</tspan><tspan dy="1.2em" x="50%" text-anchor="middle">Top</tspan>
@@ -108,7 +110,8 @@
   <div id="aboutSection" class="section-container">
     <h3 class="about">About</h3>
     <div class="section-body">
-    Details
+      <h4>Hi, I'm <span class="rotate">Claudia., a cat lover, a Gilmore Girls fan, a huge nerd</span></h4>
+      <p>Among many other things, I'm a software developer and graphic designer located in Columbus, OH(for the time being...there's a big world out there and I intend to explore it). I go to a little school called Ohio State University, where I'm majoring in computer science and minoring in visual communication design. Basically, I like making cool stuff with cool people, so I put together this site to house all that. So cruise around, take a look, and if you'd like to get in touch I'd love to hear from you!</p>
     </div>
   </div>
 
@@ -121,6 +124,19 @@
       <li>Pursuing B.S. in Computer Science</li>
       <li>Minoring in Visual Communication Design</li>
       </ul>
+      Hudson High School
+      <ul>
+        <li>Graduated Suma Cum Laude</li>
+      </ul>
+
+      <h4>Experience</h4>
+      OCLC
+
+      <h4>Extracurriculars</h4>
+      ACM-W
+        <em>Media Chair and Webmaster</em>
+      Media Marketing and Communications Scholars
+
     </div>
   </div>
 
