@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	$('hr').addClass('grow');
+
 	$('.aboutLink').on('click touchend', function() {
 		openSection($('#aboutSection'));
 		aboutIntro();
@@ -121,7 +123,7 @@ function rotate(el, words, i){
 
 function aboutIntro(){
 	var el = $('.rotate'),
-		words = ['a designer', 'a developer', 'a cat lover', 'a reality TV fan', 'a huge nerd', 'a Netflix addict', 'Claudia.'];
+		words = ['a developer', 'a designer', 'a cat lover', 'a reality TV fan', 'a huge nerd', 'a Netflix addict', 'Claudia.'];
 
 	el.html(words[0]);
 

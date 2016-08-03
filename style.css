@@ -13,7 +13,6 @@ h1 {
   font-weight: 400;
   margin: 0;
   text-align: center;
-  border-bottom: 1px #45bbca solid;
 }
 
 h2 {
@@ -24,6 +23,23 @@ h2 {
 	padding-top: .5em;
 	font-weight: 300;
 	font-family: "Raleway";
+}
+
+hr{
+  padding: .5px 0;
+  border: none;
+  background-color: #45bbca;
+}
+
+.trans--grow{
+        -webkit-transition: all .75s ease-in-out; /* For Safari 3.1 to 6.0 */
+        transition: all .75s  ease-in-out;
+  
+        width : 0;
+}
+
+.grow{
+    width:100%;
 }
 
 @media (max-width: 550px) {
