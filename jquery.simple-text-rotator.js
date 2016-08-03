@@ -22,10 +22,6 @@
     onFinish: function () { }
   };
   
-  $.fx.step.textShadowBlur = function(fx) {
-    $(fx.elem).prop('textShadowBlur', fx.now).css({textShadow: '0 0 ' + Math.floor(fx.now) + 'px black'});
-  };
-  
   $.fn.textrotator = function(options){
     var settings = $.extend({}, defaults, options);
     
@@ -57,9 +53,6 @@
 
       // animation option
       var rotate = function() {
-        switch (settings.animation) { 
-          
-          case 'flipUp':
             if(el.find(".back").length > 0) {
               el.html(el.find(".back").html())
             }
@@ -76,10 +69,6 @@
               "-o-transform": " rotateX(-180deg)",
               "transform": " rotateX(-180deg)"
             })
-            
-          break;
-          
-        }
       };
 
       var timerId = setInterval(rotate, settings.speed);

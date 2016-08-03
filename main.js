@@ -24,6 +24,7 @@ $(document).ready(function(){
 	$('.bar-nav > .about').click(function() {
 		$('.section-container').hide();
 		$('#aboutSection').show();
+		aboutIntro();
 	});
 
 	$('.bar-nav > .resume').click(function() {
@@ -96,14 +97,36 @@ function openSection(section){
 	        });
 };
 
-function aboutIntro(){
-	$(".rotate").textrotator({
-	animation: "flipUp", 
-	separator: ",", 
-	speed: 2000,
-	repeat: false,
-	onFinish: function() {
-		$(".rotate").text("Claudia");
-	}
-	});
+function rotate(el, words, i){
+	setTimeout(function(){
+		if(el.find(".back").length > 0) {
+	      el.html(el.find(".back").html())
+	    }
+	    
+	    el.html("");
+	    $("<span class='front'>" + words[i] + "</span>").appendTo(el);
+	    $("<span class='back'>" + words[i + 1] + "</span>").appendTo(el);
+	    el.wrapInner("<span class='rotating' />").find(".rotating").hide().addClass("flip up").show().css({
+	      "-webkit-transform": " rotateX(-180deg)",
+	      "-moz-transform": " rotateX(-180deg)",
+	      "-o-transform": " rotateX(-180deg)",
+	      "transform": " rotateX(-180deg)"
+	    })
+
+	    i++;
+	    if(i < words.length - 1) rotate(el, words, i);
+	}, 1500);
+	
 }
+
+function aboutIntro(){
+	var el = $('.rotate'),
+		words = ['a designer', 'a developer', 'a cat lover', 'a reality TV fan', 'a huge nerd', 'a Netflix addict', 'Claudia.'];
+
+	el.html(words[0]);
+
+	rotate(el, words, 0);
+
+}
+
+

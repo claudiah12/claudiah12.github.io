@@ -23,6 +23,7 @@ h2 {
 	margin: 0;
 	padding-top: .5em;
 	font-weight: 300;
+	font-family: "Raleway";
 }
 
 @media (max-width: 550px) {
@@ -47,8 +48,9 @@ h2 {
 	text-align: center;
 	position: absolute;
 	bottom: 0;
+	font-family: "Raleway";
 	font-size: 3.75vw;
-	font-weight: 700;
+	font-weight: 600;
 	color: #4F4E55;
 	text-decoration: none;
 }
@@ -61,6 +63,7 @@ h2 {
 #resume {
 	width: 28%;
 	left: 22%;
+	z-index: 2;
 }
 
 #design {
@@ -71,6 +74,7 @@ h2 {
 #dev {
 	width: 36%;
 	left: 65%;
+	z-index: 2;
 }
 
 .aboutTriSVG {
@@ -87,10 +91,6 @@ h2 {
 	position: absolute;
 	bottom: 0;
 	left: 22%;
-	z-index: 2;
-}
-
-#resume{
 	z-index: 2;
 }
 
@@ -116,13 +116,6 @@ h2 {
 	z-index: 2;
 }
 
-#dev {
-	z-index: 2;
-}
-
-#developmentTri:hover {
-	fill: #fff;
-}
 
 #box {
     width: 100vw;
@@ -148,7 +141,9 @@ h2 {
 	position: static;
 	width: 100%;
 	font-size: 3vw;
-	font-weight: 700;
+	font-weight: 500;
+	font-family: "Raleway";
+	font-weight: 600;
 	color: #4F4E55;
 }
 
@@ -162,22 +157,35 @@ h2 {
 
 .bar-nav .about{
 	width: 22%;
-}
-
-.about {
 	background-color: #ff8b94;
 }
 
-.resume {
+.bar-nav .resume {
 	background-color: #a8e6cf;
 }
 
-.design {
+.bar-nav .design {
 	background-color: #ffcba9;
 }
 
-.dev{
+.bar-nav .dev{
 	background-color: #d5ecb0;
+}
+
+h3.about {
+	color: #ff8b94;
+}
+
+h3.resume {
+	color: #a8e6cf;
+}
+
+h3.design {
+	color: #ffcba9;
+}
+
+h3.dev{
+	color: #d5ecb0;
 }
 
 .shadow {	
@@ -206,7 +214,7 @@ h2 {
 
 .section-body {
 	background-color: #edeff1;
-	margin: 0 20%;
+	margin: 0 15%;
 	text-align: left;
 	padding: 2%;
 }
@@ -218,6 +226,8 @@ h3 {
 	color: #fff;
 	padding: 0 15px;
 	margin-top: -1.5vh; 
+	font-family: "Raleway";
+	font-weight: 200;
 }
 
 h4 {
@@ -225,9 +235,17 @@ h4 {
 	margin: 0;
 }
 
-@media (max-width: 1000px){
+ul {
+	margin-top: 0;
+}
+
+.rotate {
+	width: calc(100% - 7em);
+}
+
+@media (max-width: 800px){
 	.section-body {
-		margin: 0 15%;
+		margin: 0 8%;
 	}
 }
 
@@ -242,7 +260,7 @@ h4 {
 	}	
 
 	.section-body {
-		margin: 0 10%;
+		margin: 0 5%;
 	}
 }
 
@@ -261,6 +279,8 @@ h4 {
 	}
 
 	.section-body {
-		margin: 0 5%;
+		margin: 0 0%;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
