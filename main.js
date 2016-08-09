@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	var designCarousel = $('#designSection > .carousel'),
+		devCarousel = $('#developmentSection > .carousel');
 
 	$('hr').addClass('grow');
 
@@ -87,6 +89,8 @@ $(document).ready(function(){
 		$('#developmentTriShadow').hide();
 	});
 
+	initializeCarousels([designCarousel, devCarousel]);
+
 });
 
 function openSection(section){
@@ -129,6 +133,23 @@ function aboutIntro(){
 
 	rotate(el, words, 0);
 
+}
+
+function initializeCarousels(carousels){
+	carousels.forEach( function(carousel){
+		$(carousel).hide();
+		var left = carousel[carousel.length -1],
+			current = carousel[0],
+			right = carousel[1];
+
+		$(left).addClass('left');
+		$(current).addClass('current');
+		$(right).addClass('right');
+
+		$(left).show();
+		$(current).show();
+		$(right).show();
+	});
 }
 
 

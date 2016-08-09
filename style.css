@@ -259,6 +259,24 @@ ul {
 	width: calc(100% - 7em);
 }
 
+.left {
+	width: 70%;
+	height: 50%;
+	position: absolute;
+	left: -80%;
+	bottom: 5%;
+	opacity: .4;
+}
+
+.right {
+	width: 70%;
+	height: 50%;
+	position: absolute;
+	right: -80%;
+	bottom: 5%;
+	opacity: .4;
+}
+
 @media (max-width: 800px){
 	.section-body {
 		margin: 0 8%;
