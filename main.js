@@ -91,6 +91,15 @@ $(document).ready(function(){
 
 	initializeCarousels([designCarousel, devCarousel]);
 
+	$('#designArrowLeft').click( function(){
+		moveCarousel(designCarousel.toArray(), 'left');
+	});
+
+	$('#designArrowRight').click( function(){
+		moveCarousel(designCarousel.toArray(), 'right');
+	});
+	
+
 });
 
 function openSection(section){
@@ -137,7 +146,7 @@ function aboutIntro(){
 
 function initializeCarousels(carousels){
 	carousels.forEach( function(carousel){
-		$(carousel).hide();
+		$(carousel).css({right: '-100%'});
 		var left = carousel[carousel.length -1],
 			current = carousel[0],
 			right = carousel[1];
@@ -146,10 +155,55 @@ function initializeCarousels(carousels){
 		$(current).addClass('current');
 		$(right).addClass('right');
 
-		$(left).show();
-		$(current).show();
-		$(right).show();
+		$(left).css({left: '-80%'});
+		$(current).css({right: 'initial'});
+		$(right).css({right: '-80%'});
 	});
+}
+
+function moveCarousel(carousel, direction){
+	var positionClasses = ['left', 'current', 'right'],
+		positions = [],
+		shift = { left: 1, right: -1 };
+	carousel.forEach( function(panelObject, index){
+		var panel = $(panelObject);
+		if(panel.hasClass('left')){
+			panel.removeClass('left');
+			positions[0] = index + shift[direction];
+			if(direction === 'left'){
+				panel.animate({left: '-100%'});
+			} else{
+				panel.animate({right: 'auto', left: 0})
+			}
+		} else if(panel.hasClass('current')){
+			panel.removeClass('current');
+			positions[1] = index + shift[direction];
+			panel.animate({[direction]: '-80%'});
+		}else if(panel.hasClass('right')){
+			panel.removeClass('right');
+			positions[2] = index + shift[direction];
+			if(direction === 'right'){
+				panel.animate({right: '-100%'});
+			} else{
+				panel.animate({right: 'auto', left: 0})
+			}
+		}
+	}, this);	
+
+	positions.forEach( function(position, index){
+		if (position === carousel.length){
+			position = 0;
+		} else if (position < 0){
+			position = carousel.length - 1;
+		}
+		$(carousel[position]).addClass(positionClasses[index]);
+	}, this);
+
+	if (direction === 'left'){
+			$(carousel[positions[0]]).animate({left: '-80%'});
+		} else {
+			$(carousel[positions[2]]).animate({right: '-80%'});
+		}
 }
 
 

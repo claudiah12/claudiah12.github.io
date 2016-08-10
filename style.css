@@ -110,7 +110,7 @@ hr{
 	z-index: 2;
 }
 
-.aboutLink:hover, .resumeLink:hover, .designLink:hover, .developmentLink:hover {
+.aboutLink:hover, .resumeLink:hover, .designLink:hover, .developmentLink:hover, .arrowLeft:hover, .arrowRight:hover {
 	cursor: pointer;
 }
 
@@ -231,8 +231,12 @@ h3.dev{
 .section-body {
 	background-color: #edeff1;
 	margin: 0 15%;
+	width: 70%;
 	text-align: left;
 	padding: 2%;
+	-webkit-transition: position 2s; /* Safari */
+    transition: position 2s;
+    position: absolute;
 }
 
 h3 {
@@ -263,18 +267,34 @@ ul {
 	width: 70%;
 	height: 50%;
 	position: absolute;
-	left: -80%;
 	bottom: 5%;
 	opacity: .4;
+	overflow: hidden;
 }
 
 .right {
 	width: 70%;
 	height: 50%;
 	position: absolute;
-	right: -80%;
 	bottom: 5%;
 	opacity: .4;
+	overflow: hidden;
+}
+
+.arrowLeft {
+	position: fixed;
+	left: 10px;
+	top: 40%;
+	height: 20vh;
+	width: 10vw;
+}
+
+.arrowRight {
+	position: fixed;
+	right: 10px;
+	top: 40%;
+	height: 20vh;
+	width: 10vw;
 }
 
 @media (max-width: 800px){
