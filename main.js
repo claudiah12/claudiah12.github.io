@@ -164,45 +164,50 @@ function initializeCarousels(carousels){
 function moveCarousel(carousel, direction){
 	var positionClasses = ['left', 'current', 'right'],
 		positions = [],
-		shift = { left: 1, right: -1 };
+		shift = { left: 1, right: -1 },
+		speed = 600;
 	carousel.forEach( function(panelObject, index){
 		var panel = $(panelObject);
 		if(panel.hasClass('left')){
 			panel.removeClass('left');
 			positions[0] = index + shift[direction];
 			if(direction === 'left'){
-				panel.animate({left: '-100%'});
+				panel.animate({left: '-100%'}, speed);
 			} else{
-				panel.animate({right: 'auto', left: 0})
+				panel.animate({right: 'auto', left: 0}, speed)
 			}
 		} else if(panel.hasClass('current')){
 			panel.removeClass('current');
 			positions[1] = index + shift[direction];
-			panel.animate({[direction]: '-80%'});
+			panel.removeAttr('left');
+			panel.removeAttr('right');
+			panel.animate({[direction]: '-80%'}, speed);
 		}else if(panel.hasClass('right')){
 			panel.removeClass('right');
 			positions[2] = index + shift[direction];
 			if(direction === 'right'){
-				panel.animate({right: '-100%'});
+				panel.animate({right: '-100%'}, speed);
 			} else{
-				panel.animate({right: 'auto', left: 0})
+				panel.animate({right: 'auto', left: 0}, speed);
 			}
 		}
 	}, this);	
 
-	positions.forEach( function(position, index){
-		if (position === carousel.length){
-			position = 0;
-		} else if (position < 0){
-			position = carousel.length - 1;
+	for (var i = 0; i < positions.length; i++){
+		if (positions[i] === carousel.length){
+			positions[i] = 0;
+		} else if (positions[i] < 0){
+			positions[i] = carousel.length - 1;
 		}
-		$(carousel[position]).addClass(positionClasses[index]);
-	}, this);
+		$(carousel[positions[i]]).addClass(positionClasses[i]);
+	}
 
-	if (direction === 'left'){
-			$(carousel[positions[0]]).animate({left: '-80%'});
+	if (direction === "left"){
+			$(carousel[positions[2]]).css({right: '-100%'});
+			$(carousel[positions[2]]).animate({right: '-80%'}, speed);
 		} else {
-			$(carousel[positions[2]]).animate({right: '-80%'});
+			$(carousel[positions[0]]).css({left: '-100%'});
+			$(carousel[positions[0]]).animate({left: '-80%'}, speed);
 		}
 }
 

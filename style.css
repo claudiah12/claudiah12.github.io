@@ -231,7 +231,7 @@ h3.dev{
 .section-body {
 	background-color: #edeff1;
 	margin: 0 15%;
-	width: 70%;
+	width: 66%;
 	text-align: left;
 	padding: 2%;
 	-webkit-transition: position 2s; /* Safari */
@@ -267,18 +267,25 @@ ul {
 	width: 70%;
 	height: 50%;
 	position: absolute;
-	bottom: 5%;
+	top: 15em;
 	opacity: .4;
 	overflow: hidden;
+	z-index: 1;
 }
 
 .right {
 	width: 70%;
 	height: 50%;
 	position: absolute;
-	bottom: 5%;
+	top: 15em;
 	opacity: .4;
 	overflow: hidden;
+	z-index: 1;
+}
+
+.current {
+	display: auto;
+	z-index: 2;
 }
 
 .arrowLeft {
@@ -287,6 +294,7 @@ ul {
 	top: 40%;
 	height: 20vh;
 	width: 10vw;
+	z-index: 3;
 }
 
 .arrowRight {
@@ -295,11 +303,13 @@ ul {
 	top: 40%;
 	height: 20vh;
 	width: 10vw;
+	z-index: 3;
 }
 
 @media (max-width: 800px){
 	.section-body {
 		margin: 0 8%;
+		width: 80%;
 	}
 }
 
@@ -315,6 +325,7 @@ ul {
 
 	.section-body {
 		margin: 0 5%;
+		width: 86%;
 	}
 }
 
@@ -336,5 +347,20 @@ ul {
 		margin: 0 0%;
 		padding-left: 10px;
 		padding-right: 10px;
+		width: calc(100% - 20px);
+	}
+
+	.left, .right{
+		display: none;
+	}
+
+	.arrowLeft {
+		opacity: .5;
+		left: 5px;
+	}
+
+	.arrowRight {
+		opacity: .5;
+		right: 5px;
 	}
 }
