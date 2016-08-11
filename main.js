@@ -91,14 +91,13 @@ $(document).ready(function(){
 
 	initializeCarousels([designCarousel, devCarousel]);
 
-	$('#designArrowLeft').click( function(){
+	$('#designArrowLeft').click(function(){
 		moveCarousel(designCarousel.toArray(), 'left');
 	});
 
-	$('#designArrowRight').click( function(){
+	$('#designArrowRight').click(function(){
 		moveCarousel(designCarousel.toArray(), 'right');
 	});
-	
 
 });
 
@@ -179,8 +178,7 @@ function moveCarousel(carousel, direction){
 		} else if(panel.hasClass('current')){
 			panel.removeClass('current');
 			positions[1] = index + shift[direction];
-			panel.removeAttr('left');
-			panel.removeAttr('right');
+			panel.removeAttr('style');
 			panel.animate({[direction]: '-80%'}, speed);
 		}else if(panel.hasClass('right')){
 			panel.removeClass('right');
@@ -203,10 +201,10 @@ function moveCarousel(carousel, direction){
 	}
 
 	if (direction === "left"){
-			$(carousel[positions[2]]).css({right: '-100%'});
+			$(carousel[positions[2]]).css({right: '-100%', left: 'auto'});
 			$(carousel[positions[2]]).animate({right: '-80%'}, speed);
 		} else {
-			$(carousel[positions[0]]).css({left: '-100%'});
+			$(carousel[positions[0]]).css({left: '-100%', left: 'auto'});
 			$(carousel[positions[0]]).animate({left: '-80%'}, speed);
 		}
 }
