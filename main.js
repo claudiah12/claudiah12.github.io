@@ -92,6 +92,7 @@ $(document).ready(function(){
 	initializeCarousels([designCarousel, devCarousel]);
 
 	$('#designArrowLeft').click(function(){
+		 $("html, body").animate({ scrollTop: 0 }, "slow");
 		moveCarousel(designCarousel.toArray(), 'right');
 	});
 
@@ -173,6 +174,7 @@ function moveCarousel(carousel, direction){
 		positions = [],
 		shift = { left: 1, right: -1 },
 		speed = 600;
+	$("html, body").animate({ scrollTop: 0 }, "slow");
 	carousel.forEach( function(panelObject, index){
 		var panel = $(panelObject);
 		if(panel.hasClass('left')){
