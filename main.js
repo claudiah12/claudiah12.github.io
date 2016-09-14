@@ -92,11 +92,11 @@ $(document).ready(function(){
 	initializeCarousels([designCarousel, devCarousel]);
 
 	$('#designArrowLeft').click(function(){
-		moveCarousel(designCarousel.toArray(), 'left');
+		moveCarousel(designCarousel.toArray(), 'right');
 	});
 
 	$('#designArrowRight').click(function(){
-		moveCarousel(designCarousel.toArray(), 'right');
+		moveCarousel(designCarousel.toArray(), 'left');
 	});
 
 });
@@ -116,7 +116,7 @@ function rotate(el, words, i){
 		if(el.find(".back").length > 0) {
 	      el.html(el.find(".back").html())
 	    }
-	    
+
 	    el.html("");
 	    $("<span class='front'>" + words[i] + "</span>").appendTo(el);
 	    $("<span class='back'>" + words[i + 1] + "</span>").appendTo(el);
@@ -130,7 +130,7 @@ function rotate(el, words, i){
 	    i++;
 	    if(i < words.length - 1) rotate(el, words, i);
 	}, 1500);
-	
+
 }
 
 function aboutIntro(){
@@ -189,7 +189,7 @@ function moveCarousel(carousel, direction){
 				panel.animate({right: 'auto', left: 0}, speed);
 			}
 		}
-	}, this);	
+	}, this);
 
 	for (var i = 0; i < positions.length; i++){
 		if (positions[i] === carousel.length){
@@ -204,9 +204,7 @@ function moveCarousel(carousel, direction){
 			$(carousel[positions[2]]).css({right: '-100%', left: 'auto'});
 			$(carousel[positions[2]]).animate({right: '-80%'}, speed);
 		} else {
-			$(carousel[positions[0]]).css({left: '-100%', left: 'auto'});
+			$(carousel[positions[0]]).css({left: '-100%', right: 'auto'});
 			$(carousel[positions[0]]).animate({left: '-80%'}, speed);
 		}
 }
-
-
