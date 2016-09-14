@@ -243,6 +243,19 @@ img.section-body {
   position: initial;
 }
 
+p.about-me{
+  float: left;
+  width: 70%;
+}
+
+.me {
+  float: right;
+  height: auto;
+  width: 25%;
+  border-radius: 50%;
+  margin-right: 2.5%;
+}
+
 h3 {
 	text-align: center;
 	display: inline-block;

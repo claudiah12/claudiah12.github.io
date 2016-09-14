@@ -92,7 +92,6 @@ $(document).ready(function(){
 	initializeCarousels([designCarousel, devCarousel]);
 
 	$('#designArrowLeft').click(function(){
-		 $("html, body").animate({ scrollTop: 0 }, "slow");
 		moveCarousel(designCarousel.toArray(), 'right');
 	});
 
@@ -100,13 +99,17 @@ $(document).ready(function(){
 		moveCarousel(designCarousel.toArray(), 'left');
 	});
 
-	$('#designSection').on('swiperight', function(){
-		moveCarousel(designCarousel.toArray(), 'right');
-	});
-
-	$('#designSection').on('swipeleft', function(){
-		moveCarousel(designCarousel.toArray(), 'left');
-	});
+	$("#designSection").swipe( {
+        //Generic swipe handler for all directions
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+          if (direction === "right"){
+						moveCarousel(designCarousel.toArray(), 'right');
+					} else if (direction === "left") {
+						moveCarousel(designCarousel.toArray(), 'left');
+					}
+        },
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+      });
 
 });
 
