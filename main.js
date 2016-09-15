@@ -100,16 +100,16 @@ $(document).ready(function(){
 	});
 
 	$("#designSection").swipe( {
-        //Generic swipe handler for all directions
-        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-          if (direction === "right"){
-						moveCarousel(designCarousel.toArray(), 'right');
-					} else if (direction === "left") {
-						moveCarousel(designCarousel.toArray(), 'left');
-					}
-        },
-        //Default is 75px, set to 0 for demo so any distance triggers swipe
-      });
+    swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
+			moveCarousel(designCarousel.toArray(), 'right');
+    }
+  });
+
+	$("#designSection").swipe( {
+		swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
+			moveCarousel(designCarousel.toArray(), 'left');
+    }
+  });
 
 });
 
