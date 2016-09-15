@@ -137,11 +137,19 @@ hr{
     width: 100vw;
     height: 100vh;
     display: none;
-  background-image: URL('stardust.png');
+    background-image: URL('stardust.png');
     position:absolute;
     bottom:0;
     left:0;
     z-index: -2;
+    /* Allows content to fill the viewport and go beyond the bottom */
+    height: 100%;
+
+    /* Allows you to scroll below the viewport; default value is visible */
+    overflow-y: scroll;
+
+    /* To smooth any scrolling behavior */
+    -webkit-overflow-scrolling: touch;
 }
 
 #container {
