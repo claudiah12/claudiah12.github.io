@@ -267,6 +267,23 @@ div.flex {
   align-items: center;
 }
 
+.contact {
+  clear: both;
+  text-align: center;
+  font-size: 3em;
+  padding-top: 20px;
+}
+
+a.icon {
+  text-decoration: none;
+  color: #69686d;
+  opacity: .5;
+}
+
+a.icon:hover {
+  opacity: 1;
+}
+
 h3 {
 	text-align: center;
 	display: inline-block;
