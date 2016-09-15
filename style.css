@@ -147,9 +147,7 @@ hr{
 
     /* Allows you to scroll below the viewport; default value is visible */
     overflow-y: scroll;
-
-    /* To smooth any scrolling behavior */
-    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
 }
 
 #container {
@@ -230,7 +228,6 @@ h3.dev{
 .section-container {
 	display: none;
 	text-align: center;
-  overflow-x: hidden;
 }
 
 .hidden {
