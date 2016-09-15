@@ -244,17 +244,27 @@ img.section-body {
   position: initial;
 }
 
-p.about-me{
+.about-me{
   float: left;
   width: 70%;
 }
 
-.me {
-  float: right;
+img.me {
   height: auto;
-  width: 25%;
+  width: 100%;
   border-radius: 50%;
-  margin-right: 2.5%;
+}
+
+div.me {
+  float: right;
+  width: 25%;
+  text-align: center;
+}
+
+div.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 h3 {
@@ -345,6 +355,24 @@ ul {
 		margin: 0 5%;
 		width: 86%;
 	}
+
+  .about-me{
+    float: none;
+    width: 100%;
+  }
+
+  div.me{
+    float: none;
+    width: 100%;
+  }
+
+  img.me{
+    width: 50%;
+  }
+
+  div.flex{
+    display: block;
+  }
 }
 
 @media (max-width: 400px) {
