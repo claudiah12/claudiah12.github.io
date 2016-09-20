@@ -111,6 +111,26 @@ $(document).ready(function(){
     }
   });
 
+	$('#devArrowLeft').click(function(){
+		moveCarousel(devCarousel.toArray(), 'right');
+	});
+
+	$('#devArrowRight').click(function(){
+		moveCarousel(devCarousel.toArray(), 'left');
+	});
+
+	$("#developmentSection").swipe( {
+		swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
+			moveCarousel(devCarousel.toArray(), 'right');
+		}
+	});
+
+	$("#developmentSection").swipe( {
+		swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
+			moveCarousel(devCarousel.toArray(), 'left');
+		}
+	});
+
 });
 
 function openSection(section){

@@ -245,6 +245,13 @@ h3.dev{
     position: absolute;
 }
 
+
+
+.section-body.small {
+  width: 36%;
+  margin: 0 30%;    
+}
+
 img.section-body {
   position: initial;
 }
@@ -275,7 +282,7 @@ div.flex {
 .contact {
   clear: both;
   text-align: center;
-  font-size: 3em;
+  font-size: 3.75em;
   padding-top: 20px;
 }
 
@@ -316,7 +323,6 @@ ul {
 
 .left {
 	width: 70%;
-	height: 50%;
 	position: absolute;
 	top: 15em;
 	opacity: .4;
@@ -326,7 +332,6 @@ ul {
 
 .right {
 	width: 70%;
-	height: 50%;
 	position: absolute;
 	top: 15em;
 	opacity: .4;
