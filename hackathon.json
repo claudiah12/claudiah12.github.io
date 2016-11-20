@@ -1,4 +1,4 @@
-jsonFlickrFeed({
+{
 		"title": "Recent Uploads with geodata",
 		"link": "https:\/\/www.flickr.com\/photos\/",
 		"description": "",
@@ -266,4 +266,4 @@ jsonFlickrFeed({
                 	"longitude" : "11.822091"
 	   }
         ]
-})
+}
