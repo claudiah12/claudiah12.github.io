@@ -167,7 +167,7 @@ function rotate(el, words, i){
 
 function aboutIntro(){
 	var el = $('.rotate'),
-		words = ['a developer', 'a designer', 'a cat lover', 'a reality TV fan', 'a huge nerd', 'a Netflix addict', 'Claudia.'];
+		words = ['a developer', 'a designer', '(sort of) trilingual', 'a wannabe carpenter', 'Claudia.'];
 
 	el.html(words[0]);
 
